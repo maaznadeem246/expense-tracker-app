@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+/* app css starts from here */
+
+.mainDiv{
+  text-align: center;
+}
+
+.heading{
+  padding:15px;
+}
+
+.crntBalDiv{
+  text-align: left;
+}
+.inexDiv{
+
+}
