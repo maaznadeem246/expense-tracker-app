@@ -3,9 +3,17 @@ import { Paper } from '@material-ui/core';
 
 function ExpenseAndIncome(){
     return (
-        <div>
+        <div className="expandincDiv">
             <Paper elevation={3} className="inexDiv">
-                income | expense
+                <div>
+                    <div>Income</div>
+                    <div>$150,00</div>
+                </div>
+                <div></div>
+                <div>
+                    <div>Expense</div>
+                    <div>$650,00</div>
+                </div>
             </Paper>
         </div>
     )

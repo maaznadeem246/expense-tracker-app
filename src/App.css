@@ -50,9 +50,30 @@
   padding:15px;
 }
 
+.crntBalDiv, .transactionComp, .historycomp, .expandincDiv{
+  padding: 10px;
+}
+
 .crntBalDiv{
   text-align: left;
 }
 .inexDiv{
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.traninpucss{
+  width: 100%;
+}
+.traninpucss > div > input{
+  padding:8px 14px;
+  
+}
+
+.transactionComp{
+  text-align: left;
+}
+
+.transactionButton{
+  width:100%;
 }
