@@ -77,3 +77,11 @@
 .transactionButton{
   width:100%;
 }
+
+.detailsitem{
+  border-radius:5px;
+  margin:14px 0px;
+    box-shadow:0px 0px 6px white ;
+    /* rgba(251, 4, 4, 0.397) */
+  
+}

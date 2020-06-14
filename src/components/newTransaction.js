@@ -1,10 +1,12 @@
-import React ,{useState} from 'react';
+import React ,{useState, useContext} from 'react';
 import Heading from './heading';
 import {Grid, TextField, Button} from '@material-ui/core';
+import { Context, } from "../context/store"
+
 
 /////////////////////////
 // this is for Transaction Component
-// where we will create new transaction
+// here we will create new transaction
 ////////////////////////
 
 
@@ -13,8 +15,27 @@ function NewTranction(){
     const [text,setText] = useState()
     const [amount, setAmount] = useState()
 
+
+    const { addTransaction, transactions } = useContext(Context)
+
+    // function will be called when we will create or add new transaction
+    const submit  = (e) => {
+
+        if(text != '' && amount != ''){
+            e.preventDefault();
+            addTransaction({
+                id: transactions.length + 1,
+                text,
+                amount: parseInt(amount),
+            })
+            setText('');
+            setAmount('');
+        }
+
+    }
+
     return(
-        <Grid container className="transactionComp" >
+        <form onSubmit={submit}  className="transactionComp" >
             <Grid item xs={12}>
                 <Heading>
                     New Transaction
@@ -34,11 +55,11 @@ function NewTranction(){
                 />
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained" className="transactionButton" color="primary">
+                <Button variant="contained" type="submit" className="transactionButton" color="primary">
                     Add Transaction
                 </Button>
             </Grid>
-        </Grid>
+        </form>
            
     
     )

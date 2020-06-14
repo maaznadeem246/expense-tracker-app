@@ -5,10 +5,13 @@ import { Grid, List, ListItem, ListItemText, ListItemSecondaryAction, IconButton
 import DeleteIcon from '@material-ui/icons/Delete';
 import {Context, } from "../context/store"
 
-// this is the transactions list component 
+//////////////
+// Transactions Component where we are creating the list of transactions 
+//////////////
+
 function Transactions() {
     const {transactions} = useContext(Context)
-    console.log(transactions)
+ 
    
 
     return(
@@ -20,7 +23,7 @@ function Transactions() {
                 <List dense={true}>
                 {
                     transactions.map(transaction=>(
-                        <TransactionDetails transaction={transaction} />
+                        <TransactionDetails transaction={transaction} bxsColor={transaction.amount > 0 ? { boxShadow:'0px 0px 6px rgb(57, 230, 0,0.397)'} : {boxShadow:'0px 0px 6px rgba(251, 4, 4, 0.397)'} } />
                     ))
                 }
                 </List>
@@ -29,4 +32,4 @@ function Transactions() {
     )
 }
 
-export default Transactions;
+export default Transactions; 
