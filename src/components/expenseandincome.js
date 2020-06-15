@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 
 const styles = {
     exValue:{
-        fontSize: '25px',
+        fontSize: '23px',
         color: 'darkslategray'
     },
     inValue:{
-        fontSize: '25px',
+        fontSize: '23px',
         color:'darkslategray'
     }
 }

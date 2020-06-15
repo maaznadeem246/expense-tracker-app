@@ -12,7 +12,7 @@ import { Context, } from "../context/store"
 
 function NewTranction(){
 
-    const [text,setText] = useState()
+    const [text,setText] = useState('')
     const [amount, setAmount] = useState()
 
 
@@ -21,7 +21,8 @@ function NewTranction(){
     // submit function will be called when we will create or add new transaction
     const submit  = (e) => {
         e.preventDefault();
-        if (text != '' && amount != '' && Number(amount)){
+        console.log(text)
+        if (text != '' && amount != undefined && amount != 0 && Number(amount)){
             e.preventDefault();
             addTransaction({
                 id: transactions.length + 1,
@@ -42,14 +43,14 @@ function NewTranction(){
                 </Heading>
             </Grid>
             <Grid item xs={12}>
-                <div> Text </div>
+                <div className="transformLabel"> Text </div>
                 <TextField className="traninpucss"  id="text"   variant="outlined" value={text}
                     onChange={(event) => { setText(event.target.value)}}
                  />
             </Grid>
             <Grid item xs={12}>
-                <div> Amount </div>
-                <TextField className="traninpucss" id="amount"  variant="outlined" value={amount}
+                <div className="transformLabel"> Amount </div>
+                <TextField className="traninpucss" id="amount" type="number"  variant="outlined" value={amount}
                     helperText="(negative-expense, positive-income)"
                     onChange={(event) => { setAmount(event.target.value) }}
                 />
