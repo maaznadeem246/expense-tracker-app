@@ -1,6 +1,22 @@
 import React, {useContext} from 'react';
 import { Paper, Typography } from '@material-ui/core';
 import { Context } from "../context/store";
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+
+const styles = {
+    exValue:{
+        fontSize: '25px',
+        color: 'darkslategray'
+    },
+    inValue:{
+        fontSize: '25px',
+        color:'darkslategray'
+    }
+}
+
+
 
 ////////////
 // Expense and Income component
@@ -8,7 +24,11 @@ import { Context } from "../context/store";
 ////////////
 
 
-function ExpenseAndIncome(){
+function ExpenseAndIncome(props){
+
+    const {classes} = props
+    
+
     const { transactions } = useContext(Context)
     let incomes = 0;
     let expenses = 0;
@@ -26,18 +46,22 @@ function ExpenseAndIncome(){
     return (
         <div className="expandincDiv">
             <Paper elevation={3} className="inexDiv">
-                <div>
+                <div className="exinMainDiv">
                     <Typography className="inHead">Income</Typography>
-                    <Typography>+${incomes}</Typography>
+                    <Typography className={clsx(classes.inValue)}>+${incomes}</Typography>
                 </div>
                 <div></div>
-                <div>
+                <div className="exinMainDiv">
                     <Typography className="exHead" >Expense</Typography>
-                    <Typography>-${expenses}</Typography>
+                    <Typography className={clsx(classes.exValue)}>-${expenses}</Typography>
                 </div>
             </Paper>
         </div>
     )
 }
 
-export default ExpenseAndIncome;
+ExpenseAndIncome.propTypes = {
+    styles: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(ExpenseAndIncome);

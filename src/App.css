@@ -63,6 +63,7 @@ body{
 .inexDiv{
   display: flex;
   justify-content: space-evenly;
+  padding: 10px;
 }
 
 .traninpucss{
@@ -106,6 +107,12 @@ body{
   padding: 10px;
   color:darkslategray;
 }
+
+.exValue, .inValue{
+  font-size:14px;
+}
+
+
 
 .otherHeadings{
   padding:5px 0px;
