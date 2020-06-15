@@ -17,9 +17,9 @@ const TransactionDetails = ({ transaction,bxsColor}) => {
 
     return (
         <ListItem className="detailsitem" style={bxsColor} >
-            <ListItemText>{transaction.text}</ListItemText>
+            <ListItemText >{transaction.text}</ListItemText>
             <ListItemText>{sign}${Math.abs(transaction.amount)}</ListItemText>
-            <ListItemSecondaryAction onClick={() => deleteTransaction(transaction.id)}>
+            <ListItemSecondaryAction className="deleteButton" onClick={() => deleteTransaction(transaction.id)}>
                 <IconButton edge="end" aria-label="delete">
                     <DeleteIcon />
                 </IconButton>

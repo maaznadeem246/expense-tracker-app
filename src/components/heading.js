@@ -9,8 +9,8 @@ function Heading ({children}) {
 
     return (
        
-        <Typography>
-            {children}
+        <Typography   >
+            <div className="otherHeadings">{children}</div>
         </Typography>
     )
   }

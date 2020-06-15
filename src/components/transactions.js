@@ -23,7 +23,7 @@ function Transactions() {
                 <List dense={true}>
                 {
                     transactions.map(transaction=>(
-                        <TransactionDetails transaction={transaction} bxsColor={transaction.amount > 0 ? { boxShadow:'0px 0px 6px rgb(57, 230, 0,0.397)'} : {boxShadow:'0px 0px 6px rgba(251, 4, 4, 0.397)'} } />
+                        <TransactionDetails transaction={transaction} bxsColor={transaction.amount > 0 ? { boxShadow: '0px 0px 8px rgb(57, 230, 0,0.779)' } : { boxShadow:'0px 0px 8px rgba(251, 4, 4, 0.579)'} } />
                     ))
                 }
                 </List>

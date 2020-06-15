@@ -37,7 +37,10 @@
   }
 }
 
-
+body{
+  color: darkslategray;
+ 
+}
 
 
 /* app css starts from here */
@@ -83,10 +86,41 @@
   margin:14px 0px;
     box-shadow:0px 0px 6px white ;
     /* rgba(251, 4, 4, 0.397) */
+   
   
+}
+
+.detailsitem>div>span{
+  font-size: 17px;
+  padding-right: 15px;
+}
+
+
+
+.detailsitem > :nth-child(2){
+  text-align: right;
 }
 
 .inHead, .exHead{
   font-weight: bold;
   padding: 10px;
+  color:darkslategray;
+}
+
+.otherHeadings{
+  padding:5px 0px;
+  text-align: left;
+  font-size:19px;
+  font-weight: 400;
+  width: inherit;
+
+}
+
+.historyHead{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.335);
+}
+
+.mainCurrency{
+  font-size: 27px;
+ 
 }

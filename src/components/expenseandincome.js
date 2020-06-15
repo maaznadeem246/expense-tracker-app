@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { Paper } from '@material-ui/core';
+import { Paper, Typography } from '@material-ui/core';
 import { Context } from "../context/store";
 
 ////////////
@@ -27,13 +27,13 @@ function ExpenseAndIncome(){
         <div className="expandincDiv">
             <Paper elevation={3} className="inexDiv">
                 <div>
-                    <div className="inHead">Income</div>
-                    <div>+${incomes}</div>
+                    <Typography className="inHead">Income</Typography>
+                    <Typography>+${incomes}</Typography>
                 </div>
                 <div></div>
                 <div>
-                    <div className="exHead" >Expense</div>
-                    <div>-${expenses}</div>
+                    <Typography className="exHead" >Expense</Typography>
+                    <Typography>-${expenses}</Typography>
                 </div>
             </Paper>
         </div>

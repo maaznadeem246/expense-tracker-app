@@ -1,6 +1,8 @@
 import React, {useContext} from "react";
 import Heading from './heading';
 import { Context } from "../context/store";
+import { Typography } from '@material-ui/core';
+
 
 // this component is for showing the Current Balance
 
@@ -12,7 +14,9 @@ function CurrentBalance(){
     return(
         <div className="crntBalDiv">
             <Heading>Your Blanace</Heading>
-            <div>${ totalamount > 0 ?  totalamount :  0 }</div>
+            <Typography>
+                <div className="mainCurrency">${ totalamount > 0 ?  totalamount :  0 }</div>
+            </Typography>
         </div>
     )
 }
