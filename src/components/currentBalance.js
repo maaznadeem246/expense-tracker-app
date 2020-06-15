@@ -12,7 +12,7 @@ function CurrentBalance(){
     return(
         <div className="crntBalDiv">
             <Heading>Your Blanace</Heading>
-            <div>${totalamount}</div>
+            <div>${ totalamount > 0 ?  totalamount :  0 }</div>
         </div>
     )
 }

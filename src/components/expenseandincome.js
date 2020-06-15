@@ -27,12 +27,12 @@ function ExpenseAndIncome(){
         <div className="expandincDiv">
             <Paper elevation={3} className="inexDiv">
                 <div>
-                    <div>Income</div>
+                    <div className="inHead">Income</div>
                     <div>+${incomes}</div>
                 </div>
                 <div></div>
                 <div>
-                    <div>Expense</div>
+                    <div className="exHead" >Expense</div>
                     <div>-${expenses}</div>
                 </div>
             </Paper>

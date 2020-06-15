@@ -18,10 +18,10 @@ function NewTranction(){
 
     const { addTransaction, transactions } = useContext(Context)
 
-    // function will be called when we will create or add new transaction
+    // submit function will be called when we will create or add new transaction
     const submit  = (e) => {
-
-        if(text != '' && amount != ''){
+        e.preventDefault();
+        if (text != '' && amount != '' && Number(amount)){
             e.preventDefault();
             addTransaction({
                 id: transactions.length + 1,
