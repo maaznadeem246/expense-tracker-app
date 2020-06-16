@@ -25,7 +25,7 @@ function NewTranction(){
         if (text != '' && amount != undefined && amount != 0 && Number(amount)){
             e.preventDefault();
             addTransaction({
-                id: transactions.length + 1,
+                id: transactions.length != 0 ? transactions[transactions.length-1].id + 1 : 0,
                 text,
                 amount: parseInt(amount),
             })
