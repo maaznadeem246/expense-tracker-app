@@ -10,6 +10,7 @@ export const ContextProvider = ({children})=>{
 
    // this action will delete the transaction
     function deleteTransaction(id){
+        console.log(id)
         dispatch({
             type:'DELETE_TRANSACTION',
             payload:id

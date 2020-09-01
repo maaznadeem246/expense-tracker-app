@@ -21,11 +21,13 @@ function NewTranction(){
     // submit function will be called when we will create or add new transaction
     const submit  = (e) => {
         e.preventDefault();
-        console.log(text)
+
         if (text != '' && amount != undefined && amount != 0 && Number(amount)){
             e.preventDefault();
+
+        
             addTransaction({
-                id: transactions.length != 0 ? transactions[transactions.length-1].id + 1 : 0,
+                id: transactions.length > 0 ? transactions[0].id + 1 : 0,
                 text,
                 amount: parseInt(amount),
             })
